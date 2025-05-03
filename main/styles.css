@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background: radial-gradient(circle at top left, #0f0c29, #302b63, #24243e);
+    color: #fdfdfd;
+    margin: 0;
+    padding: 2rem;
+    line-height: 1.6;
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -2;
+    background: radial-gradient(circle, rgba(0, 255, 255, 0.5) 1px, transparent 1px);
+    background-size: 10px 10px;
+    animation: flicker 2s infinite linear;
+}
+
+@keyframes flicker {
+    0%, 100% {
+        opacity: 0.8;
+        background-position: 0 0;
+    }
+    100% {
+        opacity: 1;
+        background-position: 50px 0px;
+    }
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    background: repeating-linear-gradient(
+        to right,
+        rgba(0, 255, 255, 0.1),
+        rgba(0, 255, 255, 0.1) 1px,
+        transparent 1px,
+        transparent 3px
+    );
+    animation: randomLines 8s linear infinite;
+}
+
+@keyframes randomLines {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-100%); }
+    100% { transform: translateY(0); }
+}
+
+h1 {
+    color: #00fff7;
+    text-shadow: 0 0 10px #00fff7, 0 0 20px #00fff7;
+    position: relative;
+    animation: glitchText 2s infinite;
+}
+
+h1 span {
+    color: #fcee09;
+    font-weight: 400;
+}
+
+h2 {
+    color: #00fff7;
+    text-shadow: 0 0 10px #00fff7, 0 0 20px #00fff7;
+    position: relative;
+}
+
+@keyframes glitchText {
+    0% { text-shadow: 2px 2px #ff00c8, -2px -2px #00fff7; }
+    20% { text-shadow: -2px 2px #ff00c8, 2px -2px #00fff7; }
+    40% { text-shadow: 2px -2px #ff00c8, -2px 2px #00fff7; }
+    60% { text-shadow: -2px -2px #ff00c8, 2px 2px #00fff7; }
+    80% { text-shadow: 2px 2px #ff00c8, -2px -2px #00fff7; }
+    100% { text-shadow: 2px -2px #ff00c8, -2px 2px #00fff7; }
+}
+
+a {
+    color: #fcee09;
+    text-decoration: none;
+}
+a:hover {
+    text-shadow: 0 0 5px #fcee09;
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 1.5rem;
+}
+li {
+    margin-bottom: 0.5rem;
+}
+strong {
+    color: #ff00ff;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.3);
+    border: 2px solid #00fff7;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 0 20px #00fff7;
+    backdrop-filter: blur(3px);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.avatar {
+    width: 120px;
+    height: auto;
+    border: 2px solid #00fff7;
+    border-radius: 4px;
+    box-shadow: 0 0 10px #00fff7, 0 0 25px #ff00ff;
+    clip-path: polygon(0% 0%, 95% 0%, 100% 10%, 100% 100%, 5% 100%, 0% 90%);
+    transform: skew(-2deg);
+    transition: filter 0.3s ease;
+}
+.avatar:hover {
+    filter: hue-rotate(45deg) saturate(1.5);
+    animation: glitchImg 0.2s infinite;
+}
+
+@keyframes glitchImg {
+    0% { transform: skew(-2deg) translateX(0); }
+    33% { transform: skew(-2deg) translateX(-2px); }
+    66% { transform: skew(-2deg) translateX(2px); }
+    100% { transform: skew(-2deg) translateX(0); }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 1rem;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .avatar {
+        width: 100px;
+    }
+}
