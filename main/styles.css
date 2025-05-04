@@ -115,7 +115,7 @@ strong {
     margin: 0 auto;
     background: rgba(0, 0, 0, 0.3);
     border: 2px solid #00fff7;
-    border-radius: 10px;
+    border-radius: 0px;
     padding: 2rem;
     box-shadow: 0 0 20px #00fff7;
     backdrop-filter: blur(3px);
@@ -239,4 +239,27 @@ strong {
 }
 .close-button:hover {
     color: #fff;
+}
+
+footer {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center; 
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.014);
+    color: #fdfdfd;
+    font-size: 0.9rem;
+    border-top: 2px solid #00fff7;
+    backdrop-filter: blur(2px);
+    margin-top: 2rem;
+}
+footer h4 {
+    margin: 0;
+    font-size: 1rem;
+    color: #fcee09;
+}
+footer .system-info {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    opacity: 0.8;
 }
