@@ -27,6 +27,7 @@ body::before {
     height: 100%;
     pointer-events: none;
     z-index: -2;
+    background: #00ffff80;
     background: radial-gradient(circle, rgba(0, 255, 255, 0.5) 1px, transparent 1px);
     background-size: 10px 10px;
     animation: flicker 2s infinite linear;
@@ -52,6 +53,7 @@ body::after {
     height: 100%;
     pointer-events: none;
     z-index: -1;
+    background: #00ffff1a;
     background: repeating-linear-gradient(
         to right,
         rgba(0, 255, 255, 0.1),
