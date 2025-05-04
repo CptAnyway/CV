@@ -255,11 +255,75 @@ footer {
 }
 footer h4 {
     margin: 0;
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #fcee09;
+    animation: glitchText 2s infinite;
 }
 footer .system-info {
     margin-top: 1rem;
     font-size: 0.8rem;
     opacity: 0.8;
 }
+
+.comment {
+    margin-bottom: 1em;
+    padding: 0.5em;
+    background-color: rgba(0, 255, 255, 0.05);
+    border-left: 4px solid #ff00ff;
+    color: #00fff7;
+}
+.comment h4 {
+    margin: 0 0 0.5rem;
+    color: #fcee09;
+}
+.comment p {
+    margin: 0.5rem 0;
+}
+
+#loadCommentsBtn {
+    padding: 0.5em 1em;
+    background: black;
+    color: #00fff7;
+    border: 2px solid #00fff7;
+    cursor: pointer;
+    font-family: 'Courier New', monospace;
+}
+#loadCommentsBtn:hover {
+    background: #00fff7;
+    color: black;
+}
+
+#commentsSection {
+    max-width: 900px; /* Максимальна ширина секції */
+    margin: 1rem auto; /* Центрування секції по горизонталі та відступи зверху/знизу */
+    text-align: center; /* Центрування тексту всередині секції */
+    padding: 1rem; /* Відступи всередині секції */
+    background: rgba(0, 0, 0, 0.3); /* Напівпрозорий фон */
+    border: 2px solid #00fff7; /* Кібер-рамка */
+    box-shadow: 0 0 20px #00fff7; /* Тінь для ефекту */
+    backdrop-filter: blur(3px); /* Розмиття фону */
+    color: #fcee09;
+}
+
+#commentsContainer {
+    margin-top: 1rem; /* Відступ між кнопкою та коментарями */
+    text-align: left; /* Вирівнювання тексту коментарів по лівому краю */
+}
+
+#loadCommentsBtn {
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+    padding: 0.5em 1em;
+    background: black;
+    color: #00fff7;
+    border: 2px solid #00fff7;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#loadCommentsBtn:hover {
+    background: #00fff7;
+    color: black;
+    animation: glitchText 1s infinite;
+}
+

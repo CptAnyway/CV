@@ -94,7 +94,7 @@
             <li>Java Development, Python - Mate academy 2017</li>
         </ul>
     </div>
-    <div id="feedbackModal" class="modal" data-delay="600">
+    <div id="feedbackModal" class="modal" data-delay="60000">
         <div class="modal-content">
             <span class="close-button" id="closeModal">&times;</span>
             <h1>Залишити відгук</h1>
@@ -115,6 +115,12 @@
             </form>
         </div>
     </div>
+    <section id="commentsSection">
+        <h3>Відгуки роботодавців:</h3>
+        <button id="loadCommentsBtn">Показати відгуки</button>
+        <div id="commentsContainer" style="display: none;"></div>
+    </section>
+    <script src="commentsLoader.js" defer></script>
     <footer>
         <h4>© 2077 CyberGod Inc. All rights hacked.</h4>
     </footer>
