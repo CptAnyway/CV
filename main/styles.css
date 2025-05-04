@@ -92,6 +92,7 @@ a {
     color: #fcee09;
     text-decoration: none;
 }
+
 a:hover {
     text-shadow: 0 0 5px #fcee09;
 }
@@ -100,9 +101,11 @@ ul {
     list-style-type: square;
     padding-left: 1.5rem;
 }
+
 li {
     margin-bottom: 0.5rem;
 }
+
 strong {
     color: #ff00ff;
 }
@@ -135,6 +138,7 @@ strong {
     transform: skew(-2deg);
     transition: filter 0.3s ease;
 }
+
 .avatar:hover {
     filter: hue-rotate(45deg) saturate(1.5);
     animation: glitchImg 0.2s infinite;
@@ -151,14 +155,88 @@ strong {
     .container {
         padding: 1rem;
     }
+
     h1 {
         font-size: 1.8rem;
     }
+
     .header {
         flex-direction: column;
         align-items: flex-start;
     }
+
     .avatar {
         width: 100px;
     }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(4px);
+}
+
+.modal-content {
+    position: relative;
+    background-color: #0f0f0f;
+    color: #00ffe1;
+    margin: 10% auto;
+    padding: 20px;
+    border: 2px solid #ff00ff;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+    font-family: 'Courier New', monospace;
+    box-shadow: 0 0 20px #ff00ff, 0 0 40px #00ffe1;
+    animation: cyberFadeIn 1s ease-out;
+}
+
+@keyframes cyberFadeIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.modal input, .modal textarea {
+    width: 95%;
+    background-color: #111;
+    color: #fcee09;
+    border: 1px solid #0ff;
+    margin: 10px 0;
+    padding: 10px;
+    font-family: 'Courier New', monospace;
+}
+
+.modal button {
+    background-color: #fcee09;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.modal button:hover {
+    background-color: #ff00ff;
+    color: #000;
+}
+
+.close-button {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: #ff00ff;
+    font-size: 48px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+    display: inline-block;
+    background: transparent;
+    border: none;
+}
+.close-button:hover {
+    color: #fff;
 }

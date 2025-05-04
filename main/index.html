@@ -2,6 +2,7 @@
 <html lang="uk">
 <head>
     <link rel="stylesheet" href="styles.css">
+    <script src="modal.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Резюме - Іван Гуменюк</title>
@@ -60,7 +61,7 @@
             <li><strong>Інженер-програміст в студії Voki Games</strong> 2023-2025</li>
                 <ul>
                     <li>Програмування ігорового коду (С++)</li>
-                    <li>Розробка архітектури управління туторіалами на основі Singleton патерну</li>
+                    <li>Розробка механізму управління туторіалами</li>
                     <li>Робота у внутрішньому Unity-подібному рушії</li>
                     <li>Програмування ігрових скриптів (Lua)</li>
                     <li>Розробка технічних скриптів (Python)</li>
@@ -91,6 +92,27 @@
             <li>«Геймифікація», «Конфліктологія», «Майстерність написання текстів», «Машинне навчання», «Word та Excel», Prometeus, онлайн</li>
             <li>Java Development, Python - Mate academy 2017</li>
         </ul>
+    </div>
+    <div id="feedbackModal" class="modal" data-delay="600">
+        <div class="modal-content">
+            <span class="close-button" id="closeModal">&times;</span>
+            <h1>Залишити відгук</h1>
+            <form action="https://formspree.io/f/myzweokw" method="POST">
+                <label for="name">Ваше ім'я:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="email">Ваш email:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="phone">Ваш телефон:</label>
+                <input type="tel" id="phone" name="phone" required>
+    
+                <label for="message">Ваше повідомлення:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+    
+                <button type="submit">Відправити</button>
+            </form>
+        </div>
     </div>
 </body>
 </html>
